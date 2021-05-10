@@ -18,6 +18,29 @@ li:only-child {
     color: purple;
 }
 
+/* + is for something that's directly after.
+~ is for something that's after, wherever it is. 
+And both only works if they have the same parent.*/
+h2 + p {
+    color: green;
+}
+
+p ~ button {
+    color:coral;
+}
+
+/* This means "For every DIRECT CHILD li inside an ul"
+This is more specific than general selector. */
+ul > li {
+    color:darkgoldenrod;
+}
+
+/* This means ANY li that's the descendants
+of an ul*/
+ul li {
+    color:darkmagenta;
+}
+
 #google-link:link {
     color:blue
 }
@@ -25,6 +48,8 @@ li:only-child {
 #google-link:visited {
     color: red;
 }
+
+
 
 .title {
     color:red;
