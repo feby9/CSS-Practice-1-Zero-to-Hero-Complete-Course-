@@ -1,5 +1,6 @@
 body {
-    background-color: aqua;
+    background-color:lightblue;
+    background: url("");
 }
 
 h2:hover {
@@ -41,6 +42,32 @@ ul li {
     color:darkmagenta;
 }
 
+/* Attribute Selector 
+^ means starts with this value
+$ means ends with this value
+* means anywhere as long as it contains this value
+| means "or".
+~ means exactly equals? I'm not sure
+*/
+img[src^="/img/"] {
+    border: 10px solid black;
+}
+
+/* If this h2 selector uses an |= it's supposed to mean
+"Find every h2 where the class is directly equals to 
+article-subtitle OR article with a dash "-"".
+But that didn't work in my case. Nothing changes
+and I don't know why. So I'll stick with ~= for now.
+*/
+h2[class~=article-subtitle] {
+    color:blueviolet;
+}
+
+.cta, .text {
+    color: rgb(200, 148, 30);
+}
+
+
 #google-link:link {
     color:blue
 }
@@ -48,8 +75,6 @@ ul li {
 #google-link:visited {
     color: red;
 }
-
-
 
 .title {
     color:red;
