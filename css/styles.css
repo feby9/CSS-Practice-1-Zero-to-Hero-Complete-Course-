@@ -1,0 +1,36 @@
+body {
+    background-color: aqua;
+}
+
+h2:hover {
+    color: white;
+}
+
+li:first-child {
+    color: steelblue;
+}
+
+li:nth-child(2) {
+    color:tomato;
+}
+
+li:only-child {
+    color: purple;
+}
+
+#google-link:link {
+    color:blue
+}
+
+#google-link:visited {
+    color: red;
+}
+
+.title {
+    color:red;
+}
+
+#title-description {
+    color: blue;
+}
+
