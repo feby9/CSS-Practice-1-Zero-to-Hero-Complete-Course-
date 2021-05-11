@@ -6,6 +6,71 @@ body {
     font-family: "Arial", sans-serif;
 }
 
+/* padding: top right bottom left OR 
+padding: all 
+margin: top&bottom left&right 
+
+2 types of display: block, and inline.
+float: where.
+*/
+
+.flexwrap, .flexwrap1 {
+    background-color: beige;
+    border: 10px solid green;
+    margin: 20px 40px;
+}
+
+.flexwrap {
+    height: 500px;
+    width: 60%;
+    padding: 80px 40px 0px 30px;
+}
+
+/* flex-wrap's default is nowrap. Wrap will make the items
+inside the container from a single-line into a multi-line.
+That means, if an item is out of bounds, a newline occurs and 
+all items will be placed evenly on 2 or more lines.
+
+justify content. If you want stretched out, use space-between.
+If you want a centered flexbox, use space-around.
+
+align-items. Default is stretched. Baseline will, no matter the
+vertical size, put everything in the same line.
+
+if you want to center everything, just set both of those two
+properties above to center.
+
+flex: grow shrink basis
+flex grow 5 means that item will take 5 times more space than 
+the rest of the items. Flex grow has to be defined for every items
+because it is relative to the rest of the items. 
+Default flex grow is 0. Default shrink is 1.
+If you don't want something to shrink, set it to 0.
+*/
+
+.flexwrap1 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: baseline;
+    height: 500px;
+}
+
+.flexitem1 {
+    background-color: royalblue;
+    margin: 5px;
+    height: 70px;
+    width: 80px;
+    flex: 1 1 100px;
+}
+
+.flextitle {
+    background-color: brown;
+}
+
+/* Usually the best way is to use height is with absolute units
+like pixels. And relative units for width like % or vw. */
 
 /* font-weight 400 is the "normal" weight 
 
@@ -30,8 +95,14 @@ Monospace examples: Courier new
     width: 50%;
 }
 
+/* border: size style color 
+size usually 1 to 4 px,
+style usually solid.*/
+
 .wrap1 {
-    background: linear-gradient(to top right, red, green, steelblue, blue)
+    background: linear-gradient(to top right, red, green, steelblue, blue);
+    border: 10px solid rgb(154, 174, 200);
+    float: right;
 }
 
 .wrap2 {
@@ -40,6 +111,7 @@ Monospace examples: Courier new
 
 .wrap3 {
     background: radial-gradient(circle, red 10%, blue 40%,rgba(70, 130, 180, 0.1) 55%);
+    display: inline-block;
 }
 
 h2:hover {
