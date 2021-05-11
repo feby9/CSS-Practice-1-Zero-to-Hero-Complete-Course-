@@ -1,6 +1,44 @@
 body {
-    background-color:lightblue;
-    background: url("");
+    background: linear-gradient(to bottom, rgb(173, 216, 230) , rgba(173, 216, 230, 0.4));
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 1.15em;
+    font-family: "Arial", sans-serif;
+}
+
+
+/* font-weight 400 is the "normal" weight 
+
+serif fonts have these kind-of underline in some letters.
+serif is usually used for academic papers, printed texts, etc..
+But serif is hard to read on computers or any digital media.
+Serif examples: Times New Roman (most famous), Georgia
+
+So we use sans serif, which doesn't have those underline
+for digital texts.
+Plus, MOST websites like google and facebook use sans serif.
+So we'll be using sans serif here.
+Sans serif examples are: Arial, Calibri (Pretty common in gdocs)
+
+Monospace are when every letter will take the same space.
+Monospace examples: Courier new
+*/
+
+.wrap1, .wrap2, .wrap3 {
+    height: 100px;
+    width: 50%;
+}
+
+.wrap1 {
+    background: linear-gradient(to top right, red, green, steelblue, blue)
+}
+
+.wrap2 {
+    background: linear-gradient(215deg, rgb(70, 130, 180), rgba(70, 130, 180, 0.1));
+}
+
+.wrap3 {
+    background: radial-gradient(circle, red 10%, blue 40%,rgba(70, 130, 180, 0.1) 55%);
 }
 
 h2:hover {
@@ -65,6 +103,7 @@ h2[class~=article-subtitle] {
 
 .cta, .text {
     color: rgb(200, 148, 30);
+    font-weight: 400;
 }
 
 
